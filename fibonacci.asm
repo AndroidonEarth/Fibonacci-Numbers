@@ -1,4 +1,4 @@
-TITLE Fibonacci Numbers     (Fibonacci.asm)
+TITLE Fibonacci Numbers     (fibonacci.asm)
 
 ; Author: Andrew Swaim
 ; Date: 1/28/2018
@@ -15,7 +15,6 @@ UPPER_LIMIT = 46
 .data
 program			BYTE	"Fibonacci Numbers",0
 author			BYTE	"Programmed by Andrew Swaim",0
-ecNote			BYTE	"**:EC: Numbers displayed in aligned columns!",0
 prompt1			BYTE	"What's your name? ",0
 userName		BYTE	21 DUP (0)
 greeting		BYTE	"Hello, ",0
@@ -39,10 +38,6 @@ main PROC
 	call	Crlf
 ;Display author name
 	mov		edx,OFFSET author
-	call	WriteString
-	call	Crlf
-;Indicate extra credit
-	mov		edx,OFFSET ecNote
 	call	WriteString
 	call	Crlf
 	call	Crlf
